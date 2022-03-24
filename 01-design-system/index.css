@@ -52,3 +52,41 @@ select {
   }
 }
 /**** End Reset Section ****/
+
+/**** Utility Classes ****/
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 2rem;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/**** End Utility Classes ****/
+
+.box {
+  background-color: orangered;
+  height: 10rem;
+  width: 100%;
+}
