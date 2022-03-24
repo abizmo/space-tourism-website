@@ -1,3 +1,11 @@
+/**** Custom properties ****/
+
+:root {
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-900: 230 35% 7%;
+  --clr-accent: 231 77% 90%;
+}
+
 /**** Reset Section ****/
 /* Box sizing */
 *,
@@ -54,6 +62,7 @@ select {
 /**** End Reset Section ****/
 
 /**** Utility Classes ****/
+/* General */
 
 .flex {
   display: flex;
@@ -83,10 +92,30 @@ select {
   width: 1px;
 }
 
-/**** End Utility Classes ****/
+/* Colors */
 
-.box {
-  background-color: orangered;
-  height: 10rem;
-  width: 100%;
+.bg-dark {
+  background-color: hsl(var(--clr-neutral-900));
 }
+
+.bg-accent {
+  background-color: hsl(var(--clr-accent) / var(--bg-alpha, 1));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-neutral-100));
+}
+
+.text-dark {
+  color: hsl(var(--clr-neutral-900));
+}
+
+.text-accent {
+  color: hsl(var(--clr-accent));
+}
+
+.text-white {
+  color: hsl(var(--clr-neutral-100));
+}
+
+/**** End Utility Classes ****/
