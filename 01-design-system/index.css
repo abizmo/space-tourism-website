@@ -206,7 +206,7 @@ select {
   z-index: 1;
 }
 
-.large-button:after {
+.large-button::after {
   background-color: hsl( var(--clr-neutral-100) );
   border-radius: 50%;
   content: '';
@@ -218,8 +218,48 @@ select {
   z-index: -1;
 }
 
-.large-button:hover:after {
+.large-button:hover::after,
+.large-button:focus::after {
   opacity: .1;
   transform: scale(1.5);
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators > * {
+  border: 0;
+  border-bottom: .2rem solid hsl(var(--clr-neutral-100) / 0);
+  cursor: pointer;
+  padding: var(--underline-gap, 1em) 0;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(var(--clr-neutral-100) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  border-color: hsl(var(--clr-neutral-100));
+  color: hsl(var(--clr-neutral-100));
+}
+
+.tab-list {
+  --gap: 2rem;
 }
 /**** End Components Classes ****/

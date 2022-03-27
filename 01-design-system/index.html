@@ -98,11 +98,40 @@
       <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
 
       <!-- navigation -->
-      <div></div>
+      <div>
+        <nav>
+          <ul class="primary-navigation underline-indicators flex">
+            <li class="active">
+              <a class="ff-sans-cond fs-300 letter-spacing-2 uppercase text-white" href="#">
+                <span>01</span>active
+              </a>
+            </li>
+            <li>
+              <a class="ff-sans-cond fs-300 letter-spacing-2 uppercase text-white" href="#">
+                <span>02</span>hovered
+              </a>
+            </li>
+            <li>
+              <a class="ff-sans-cond fs-300 letter-spacing-2 uppercase text-white" href="#">
+                <span>03</span>idle
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-      <div class="flex" style="margin-top: 4rem;">
-        <!-- eplore button -->
-        <a href="#" class="large-button ff-serif fs-600 bg-white text-dark uppercase">Explore</a>
+      <div class="flex">
+        <div style="margin-top: 4rem;">
+          <!-- eplore button -->
+          <a href="#" class="large-button ff-serif fs-600 bg-white text-dark uppercase">Explore</a>
+        </div>
+        <div>
+          <div class="tab-list underline-indicators flex">
+            <button aria-selected="true" class="ff-sans-cond fs-300 letter-spacing-2 uppercase text-accent bg-dark">Moon</button>
+            <button aria-selected="false" class="ff-sans-cond fs-300 letter-spacing-2 uppercase text-accent bg-dark">Mars</button>
+            <button aria-selected="false" class="ff-sans-cond fs-300 letter-spacing-2 uppercase text-accent bg-dark">Europa</button>
+          </div>
+        </div>
       </div>
     </section>
   </div>
