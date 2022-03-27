@@ -7,12 +7,13 @@
   --clr-accent: 231 77% 90%;
 
   /* font-sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
+  /* Clamp(minSize, middleSize(responsive), maxSize) */
+  --fs-900: clamp(5rem, 7vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
   --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-400: .9375rem;
   --fs-300: 1rem;
   --fs-200: .875rem;
 
@@ -20,6 +21,24 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
 }
 
 /**** Reset Section ****/
@@ -62,6 +81,7 @@ body {
   font-size: var(--ff-400);
   line-height: 1.5;
   min-height: 100vh;
+  /* Split page into Header and main div */
   display: grid;
   grid-template-rows: min-content 1fr;
 }
@@ -121,21 +141,24 @@ select {
   display: grid;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 50em) {
   .grid-container {
     column-gap: var(--container-gap, 2rem);
+    /* display container as 2 auto margins and 2 content columns */
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
   }
 
+  /* place content in each col */
   .grid-container > *:first-child {
     grid-column: 2;
   }
-  
+ 
   .grid-container > *:last-child {
     grid-column: 3;
   }
 }
 
+/* hide content */
 .sr-only {
   border: 0;
   clip: rect(0,0,0,0);
