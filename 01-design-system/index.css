@@ -262,4 +262,22 @@ select {
 .tab-list {
   --gap: 2rem;
 }
+
+.dot-indicators > * {
+  aspect-ratio: 1;
+  background-color: hsl(var(--clr-neutral-100) / .17);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: .5em;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  background-color: hsl(var(--clr-neutral-100) / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-neutral-100));
+}
 /**** End Components Classes ****/
