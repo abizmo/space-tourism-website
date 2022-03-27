@@ -280,4 +280,24 @@ select {
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-neutral-100));
 }
+
+.number-indicators > * {
+  aspect-ratio: 1;
+  border: 1px solid hsl(var(--clr-neutral-100) / .25);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0 2em;
+  width: fit-content;
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus {
+  border-color: hsl(var(--clr-neutral-100));
+}
+
+.number-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-neutral-100));
+  border-color: hsl(var(--clr-neutral-100));
+  color: hsl(var(--clr-neutral-900));
+}
 /**** End Components Classes ****/
