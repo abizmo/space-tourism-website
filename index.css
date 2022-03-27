@@ -364,3 +364,28 @@ select {
 }
 
 /**** End Components Classes ****/
+
+/**** Page specific background ****/
+
+body {
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.home {
+  background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35em) {
+  .home {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+    background-position: center center;
+  }
+}
+
+@media (min-width: 50em) {
+  .home {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+  }
+}
+/**** End Page specific background ****/
