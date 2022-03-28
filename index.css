@@ -287,11 +287,35 @@ select {
 }
 
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 2em;
+  background-color: hsl( var(--clr-neutral-900) / .95);
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* backdrop-filter is not supported in firefox */
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background-color: hsl( var(--clr-neutral-100) / .05);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+/* max-width due to complexity of the mobile component */
+@media (max-width: 35em) {
+  .primary-navigation {
+    --underline-gap: .5rem;
+    flex-direction: column;
+    inset: 0 0 0 30%;
+    padding: min(6rem, 20vh) 2rem;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .primary-navigation.underline-indicators > .active {
+    border: 0;
+  }
 }
 
 .primary-navigation a {
