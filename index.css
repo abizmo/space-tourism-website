@@ -84,6 +84,7 @@ body {
   /* Split page into Header and main div */
   display: grid;
   grid-template-rows: min-content 1fr;
+  overflow: hidden;
 }
 
 /* Make images easier to work with */
@@ -294,6 +295,10 @@ select {
   padding: 0;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 /* backdrop-filter is not supported in firefox */
 @supports (backdrop-filter: blur(1rem)) {
   .primary-navigation {
@@ -311,8 +316,23 @@ select {
     padding: min(6rem, 20vh) 2rem;
     position: fixed;
     z-index: 1000;
+    transform: translateX(100%);
   }
   
+  .mobile-nav-toggle {
+    aspect-ratio: 1;
+    background: transparent;
+    background-image: url(./assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    border: 0;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    width: 1.5rem;
+    z-index: 2000;
+  }
+
   .primary-navigation.underline-indicators > .active {
     border: 0;
   }
