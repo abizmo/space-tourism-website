@@ -318,6 +318,10 @@ select {
     z-index: 1000;
     transform: translateX(100%);
   }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+  }
   
   .mobile-nav-toggle {
     aspect-ratio: 1;
@@ -325,6 +329,7 @@ select {
     background-image: url(./assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     border: 0;
+    cursor: pointer;
     display: block;
     position: absolute;
     right: 1rem;
