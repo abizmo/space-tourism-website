@@ -287,6 +287,9 @@ select {
   transform: scale(1.5);
 }
 
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 4rem);
+}
 .primary-navigation {
   --underline-gap: 2em;
   background-color: hsl( var(--clr-neutral-900) / .95);
