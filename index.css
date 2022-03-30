@@ -290,12 +290,28 @@ select {
 .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 4rem);
 }
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .primary-navigation {
   --underline-gap: 2em;
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   background-color: hsl( var(--clr-neutral-900) / .95);
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
 }
 
 .mobile-nav-toggle {
@@ -352,13 +368,14 @@ select {
   }
 }
 
-.primary-navigation a {
-  text-decoration: none;
-}
+@media (min-width: 35em) and (max-width: 50em) {
+  .primary-navigation {
+    padding-inline: 2rem;
+  }
 
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: .5em;
+  .primary-navigation a > span {
+    display: none;
+  }
 }
 
 .underline-indicators > * {
