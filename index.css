@@ -307,6 +307,7 @@ select {
 }
 
 .primary-header {
+  --gap: 2rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -392,7 +393,7 @@ select {
     width: 100%;
     background: hsl( var(--clr-neutral-100) / .25);
     order: 1;
-    margin-right: -2.5rem;
+    margin-right: -3rem;
   }
   
   .primary-header nav {
