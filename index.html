@@ -16,7 +16,7 @@
     <script src="index.js" defer></script>
   </head>
   <body class="home">
-
+    <a class="skip-to-content" href="#main">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
@@ -26,29 +26,29 @@
         <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
           <li class="active">
             <a href="#" class="ff-sans-cond fs-300 letter-spacing-2 text-white uppercase">
-              <span>00</span>Home
+              <span aria-hidden="true">00</span>Home
             </a>
           </li>
           <li>
             <a href="#" class="ff-sans-cond fs-300 letter-spacing-2 text-white uppercase">
-              <span>01</span>Destination
+              <span aria-hidden="true">01</span>Destination
             </a>
           </li>
           <li>
             <a href="#" class="ff-sans-cond fs-300 letter-spacing-2 text-white uppercase">
-              <span>02</span>Crew
+              <span aria-hidden="true">02</span>Crew
             </a>
           </li>
           <li>
             <a href="#" class="ff-sans-cond fs-300 letter-spacing-2 text-white uppercase">
-              <span>03</span>Technology
+              <span aria-hidden="true">03</span>Technology
             </a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="grid-container grid-container--home">
+    <main id="main" class="grid-container grid-container--home">
       <div>
         <h1 class="ff-sans-cond fs-500 letter-spacing-1 text-accent uppercase">So, you want to travel to
         <span class="d-block ff-serif fs-900 uppercase">Space</span></h1>
