@@ -369,12 +369,26 @@ select {
 }
 
 @media (min-width: 35em) {
+  .primary-header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: hsl( var(--clr-neutral-100) / .25);
+    order: 1;
+    margin-right: -2.5rem;
+  }
+  
+  .primary-header nav {
+    order: 2;
+  }
   .primary-navigation {
     padding-inline: clamp(2rem, 7vw, 7rem);
   }
 }
 
-@media (min-width: 35em) and (max-width: 50em) {
+@media (min-width: 35em) and (max-width: 49.999em) {
   .primary-navigation a > span {
     display: none;
   }
