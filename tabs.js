@@ -12,7 +12,7 @@ let tabFocus = 0;
 function changeTabFocus (evt) {
   const keydownLeft = 37;
   const keydownRight = 39;
-  const { keyCode, target } = evt;
+  const { keyCode } = evt;
 
   if (keyCode === keydownLeft || keyCode === keydownRight) {
     tabs[tabFocus].setAttribute("tabIndex", -1);
@@ -30,8 +30,7 @@ function changeTabFocus (evt) {
   }
 }
 
-function changeTabPanel(evt) {
-  const { target: targetTab } = evt;
+function changeTabPanel({ target: targetTab }) {
   const targetPanel = targetTab.getAttribute("aria-controls");
   const targetPicture = targetTab.getAttribute("data-image");
 
