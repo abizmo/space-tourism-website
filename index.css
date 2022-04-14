@@ -92,7 +92,7 @@ body {
 /* Make images easier to work with */
 img,
 picture {
-  displkay: block;
+  display: block;
   max-width: 100%;
 }
 
@@ -434,7 +434,7 @@ select {
   border: 1px solid hsl(var(--clr-neutral-100) / .25);
   border-radius: 50%;
   cursor: pointer;
-  padding: 0 2em;
+  padding: 0 1em;
   width: fit-content;
 }
 
@@ -592,6 +592,31 @@ body {
   opacity: .5;
 }
 
+/* technology layout */
+
+.grid-container--technology {
+  grid-template-areas:
+    'title'
+    'image'
+    'indicators'
+    'content';
+}
+
+.grid-container--technology picture {
+  grid-area: image;
+  width: calc(100% + 2rem);
+  max-width: none;
+  margin-inline: -1rem;
+}
+
+.grid-container--technology .number-indicators {
+  grid-area: indicators;
+}
+
+.grid-container--technology .technology-content {
+  grid-area: content;
+}
+
 @media (min-width: 35.001em) {
   .numbered-title {
     justify-self: start;
@@ -671,6 +696,19 @@ body {
     grid-column: span 2;
     align-self: end;
     max-width: 100%;
+  }
+
+  .grid-container--technology {
+    grid-template-columns: 1rem minmax(0, 5rem) minmax(0, 30rem) minmax(0, 32rem);
+    grid-template-areas:
+      '. title title .'
+      '. indicators content image';
+    justify-content: space-between;
+    margin-inline-end: -2rem;
+  }
+
+  .grid-container--technology > .number-indicators {
+    flex-direction: column;
   }
 }
 /**** End Layout ****/
