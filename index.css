@@ -92,7 +92,6 @@ body {
 /* Make images easier to work with */
 img,
 picture {
-  display: block;
   max-width: 100%;
 }
 
@@ -250,7 +249,7 @@ select {
   display: inline-grid;
   font-size: 2rem;
   padding: 0 2em;
-  place-content: center;
+  place-items: center;
   position: relative;
   text-decoration: none;
   z-index: 1;
@@ -712,3 +711,4 @@ body {
   }
 }
 /**** End Layout ****/
+
