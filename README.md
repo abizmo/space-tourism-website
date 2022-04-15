@@ -47,7 +47,7 @@ Users should be able to:
 
 ### Useful resources
 
-- [](https://youtu.be/lRaL-8qZ0mM) - This learned me a lot of css and accesibilty stuff.
+- [Create a Design System with CSS - Web Development Course](https://youtu.be/lRaL-8qZ0mM) - This learned me a lot of css and accesibilty stuff.
 
 ## Author
 
@@ -57,6 +57,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I folowed the Kevin Powell's Web Development Course. I learned how to organize and use properly CSS. Also He gives some usefull tips of accessibilty.
